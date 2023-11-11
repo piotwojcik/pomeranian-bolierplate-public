@@ -13,3 +13,15 @@
     border-radius: 10px ;
 
 }
+
+.grid-components{
+    display: grid;
+    grid-template-columns: repeat(3, 202px);
+    grid-template-rows: repeat(2, 192px);
+    column-gap: 35px;
+    row-gap: 35px;
+}
+.width{
+    width: 43px;
+    height: 43px;
+}

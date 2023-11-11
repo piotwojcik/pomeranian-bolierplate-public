@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './styles/header.css';
 
@@ -7,10 +7,24 @@ import SettingLogo from '../Images/setting.svg';
 import { RoundedImage } from '../Components/RoundedImage/RoundedImage';
 import ProfilePhoto from '../Images/Piotr_Wojcik_WEEK4_CV.JPG';
 import { Arrow } from '../Components/Icons/Arrow';
-import { EditIcon } from '../Components/Icons/EditIcon';
 
 //  ../ wyjscie folder wyzej , ./ szukanie w tym samym folderze
 export function AppHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handletoggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  const toogleMenu = () => {
+    return (
+      <div className="toggle-menu">
+        <button className="log-in">Zaloguj się</button>
+        <div>
+          Nie masz konta?
+          <button>Zarejestruj się</button>
+        </div>
+      </div>
+    );
+  };
   return (
     <header>
       <div className="header-container">
@@ -22,7 +36,10 @@ export function AppHeader() {
             <span>Piotr</span>
             <span className="student">kursant</span>
           </div>
-          <Arrow />
+          <div className="relative-div">
+            <Arrow onClick={handletoggleMenu} />
+            <div className="absolut-div">{isMenuOpen && toogleMenu()}</div>
+          </div>
         </div>
       </div>
     </header>
