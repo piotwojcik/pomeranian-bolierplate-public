@@ -36,6 +36,7 @@ export function App() {
           <Route path="techstack/*" element={<Techstack />} />
           <Route path="material-ui/*" element={<MaterialUI />} />
           <Route path="faq/*" element={<Faq />} />
+          {/* ścieżka gwiazdka musi byc na końcu */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
