@@ -11,16 +11,18 @@ import { Arrow } from '../Components/Icons/Arrow';
 //  ../ wyjscie folder wyzej , ./ szukanie w tym samym folderze
 export function AppHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handletoggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   const toogleMenu = () => {
     return (
       <div className="toggle-menu">
         <button className="log-in">Zaloguj się</button>
-        <div>
-          Nie masz konta?
-          <button>Zarejestruj się</button>
+        <div className="sign-in">
+          <div>Nie masz konta?</div>
+          <button className="sign-in-button">Zarejestruj się</button>
         </div>
       </div>
     );

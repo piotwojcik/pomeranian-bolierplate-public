@@ -78,4 +78,22 @@ color: #FFF;
 padding: 10px 36px;
 width: 206px;
 height: 36px;
+margin-top: 8px
 }
+ .sign-in{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+ }
+ .sign-in-button{
+  border-radius: 8px;
+border: 1px solid  #FE3756;
+background: #FE3756;
+font-size: 12px;
+font-weight: 500;
+color: #FFF;
+/* padding: 10px 36px; */
+width: 106px;
+height: 18px;
+margin-top: 4px;
+ }
