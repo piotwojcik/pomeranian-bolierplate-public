@@ -18,6 +18,9 @@ import { blockRouterMetaDataJsStorages } from './JsStorages/router-data';
 import { blockRouterMetaDataSavedInput } from './SavedInput/router-data';
 import { blockRouterMetaDataAsyncAwait } from './AsyncAwait/router-data';
 import { blockRouterMetaDataTryCatchFinally } from './TryCatchFinally/router-data';
+import { blockRouterMetaDataObject } from './JsObjectBasics/router-data';
+import { blockRouterMetaDataStringMethods } from './JsStringBasics/router-data';
+import { blockRouterMetaDataDateTime } from './DateTime/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -38,5 +41,8 @@ export const blockRouterMetaData = [
   blockRouterMetaDataSavedInput,
   blockRouterMetaDataAsyncAwait,
   blockRouterMetaDataTryCatchFinally,
+  blockRouterMetaDataObject,
+  blockRouterMetaDataStringMethods,
+  blockRouterMetaDataDateTime,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
